@@ -1,14 +1,12 @@
 % !TeX encoding = UTF-8
 
-%% chhzh123's personal macro package v2.0 2020/03
+%% designer for 413 class ;date: 2023/05/18
 %
 %% mypackage.sty
-%
-%% Copyright 2018--2020 chhzh123
 
 % Identification
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mypackage}[2020/03/24]
+\ProvidesPackage{mypackage}[2023/05/18]
 
 % Option declarations
 \DeclareOption{english}{\def\chhzhdef@english{\relax}}
@@ -30,10 +28,13 @@
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
-\RequirePackage{amssymb} %\because\therefore
+\RequirePackage{amssymb} 
 \RequirePackage{amsxtra}
 \RequirePackage{mathtools}
 \RequirePackage{etoolbox}
+\RequirePackage{comment}
+\RequirePackage{array}
+
 
 \RequirePackage{nicematrix}
 
@@ -116,6 +117,7 @@
 	numberstyle=\scriptsize\color{gray}
 }%
 \fi
+
 
 \ifdefined\chhzhdef@table
 \RequirePackage{bigstrut}
@@ -421,6 +423,7 @@
 \newcommand{\dnf}[1]{f^{(#1)}}
 \newcommand{\surfaceint}[4]{\displaystyle\iint_{#1}{#2}\diff y\diff z+{#3}\diff z\diff x+{#4}\diff x\diff y}
 
+
 % Localization words (pppppass)
 \ifdefined\chhzhdef@english%
 \newcommand{\thmdefinitionnamethm}{Definition}%
@@ -442,6 +445,7 @@
 \newcommand{\thmanalysisnamethm}{Analysis}%
 \newcommand{\thmexercisenamethm}{Exercise}%
 \else%
+
 \newcommand{\thmdefinitionnamethm}{定义}%
 \newcommand{\thmconceptnamethm}{概念}%
 \newcommand{\thmnotationnamethm}{记号}%
@@ -461,6 +465,7 @@
 \newcommand{\thmanalysisnamethm}{分析}%
 \newcommand{\thmexercisenamethm}{练习}%
 \fi%
+
 
 \ifdefined\chhzhdef@slide%
 {%
